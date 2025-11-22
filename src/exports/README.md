@@ -1,13 +1,13 @@
-# Cline API
+# Tirmizi API
 
-The Cline extension exposes an API that can be used by other extensions. To use this API in your extension:
+The Tirmizi extension exposes an API that can be used by other extensions. To use this API in your extension:
 
 1. Copy `src/extension-api/cline.d.ts` to your extension's source directory.
 2. Include `cline.d.ts` in your extension's compilation.
 3. Get access to the API with the following code:
 
     ```ts
-    const clineExtension = vscode.extensions.getExtension<ClineAPI>("saoudrizwan.claude-dev")
+    const clineExtension = vscode.extensions.getExtension<ClineAPI>("tirmizi.tirmizi")
 
     if (!clineExtension?.isActive) {
     	throw new Error("Cline extension is not activated")
@@ -37,11 +37,11 @@ The Cline extension exposes an API that can be used by other extensions. To use 
     }
     ```
 
-    **Note:** To ensure that the `saoudrizwan.claude-dev` extension is activated before your extension, add it to the `extensionDependencies` in your `package.json`:
+    **Note:** To ensure that the `tirmizi.tirmizi` extension is activated before your extension, add it to the `extensionDependencies` in your `package.json`:
 
     ```json
     "extensionDependencies": [
-        "saoudrizwan.claude-dev"
+        "tirmizi.tirmizi"
     ]
     ```
 
